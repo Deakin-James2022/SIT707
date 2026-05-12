@@ -1,4 +1,5 @@
 package web.service;
+
 import org.junit.Assert;
 import org.junit.Test;
 import org.openqa.selenium.By;
@@ -7,19 +8,23 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 //import org.junit.After;
 //import org.junit.Before;
+import java.util.logging.Logger;
 
 public class LoginServiceTest {
 	
 //	private WebDriver driver;
 	
+	//Auto-generated catch block
+	private static final Logger logger =
+	        Logger.getLogger(LoginServiceTest.class.getName());
 	private void sleep(long sec) {
-		try {
-			Thread.sleep(sec*1000);
-		} catch (InterruptedException e) {
-			e.printStackTrace();// TODO Auto-generated catch block
-		}
+	    try {
+	        Thread.sleep(sec * 1000);
+	    } catch (InterruptedException e) {
+	        Thread.currentThread().interrupt();
+	        logger.severe("Sleep interrupted: " + e.getMessage());
+	    }
 	}
-	
 
 /*	@Before
     public void setUp() {
